@@ -1,0 +1,23 @@
+{
+  "name": "barkr",
+  "version": "1.0.0",
+  "description": "Marketplace Application for K9 owners to find play dates for their dogs/companions.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "nodemon server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MShinControl/barkr.git"
+  },
+  "author": "Mark Shin, Mohtasim Chowdhury, Derek Cross, & Andy Wong",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MShinControl/barkr/issues"
+  },
+  "homepage": "https://github.com/MShinControl/barkr#readme",
+  "dependencies": {
+    "nodemon": "^1.19.3"
+  }
+}
