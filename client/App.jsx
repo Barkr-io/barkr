@@ -1,10 +1,18 @@
 import React, {Component} from "react";
-
+import { Switch, Route } from 'react-router-dom';
+import Signup from './components/signup.jsx'
+import Login from './components/login.jsx'
 
 class App extends Component{
    render(){
      return(
-       <p>....Hey there..... !!</p>
+       <div>
+         here we go.....
+          <Switch>
+            <Route exact path="/" component={()=><Login  /> } />
+            <Route exact path="/Signup" component={()=><Signup  />}/>
+          </Switch>
+       </div>
      )
    }
 }
