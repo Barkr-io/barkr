@@ -12,6 +12,7 @@ class Signup extends Component{
            <input id='email'></input>
            <input id='location'></input>
            <input id='password'></input>
+           <button id='signUpButton'>Sign up</button>
            To login go to <Link to={`/`}>Login page</Link>
          </form>
        </div>
