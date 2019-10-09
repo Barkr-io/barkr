@@ -14,8 +14,7 @@ userController.getUsers = (req, res, next) => {
 userController.postUsers = (req, res, next) => {
   const { email, first_name, last_name, password } = req.body;
   const values = [email, first_name, last_name, password];
-  let dbQuery =
-    "INSERT INTO User_table (email, first_name, last_name, password) VALUES ($1, $2, $3, $4)";
+  let dbQuery = `INSERT INTO User_table (email, first_name, last_name, password) VALUES ($1, $2, $3, $4)`;
   pool.query(dbQuery, values).catch(err => res.status(500).send(err));
   res.status(200).json(req.body.email);
 };

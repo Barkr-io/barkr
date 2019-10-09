@@ -6,7 +6,7 @@ const port = 3000;
 
 app.use(cookieParser());
 app.use(express.json());
-app.use(express.static("views"));
+app.use(express.urlencoded({ extended: false }));
 
 // Temp
 const userController = require("./controllers/user.controller");
@@ -17,8 +17,10 @@ app.get("/getUsers", userController.getUsers, (req, res) => {
 // End of Temp
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../views/index.html"));
+  res.sendFile(path.join(__dirname, "../index.html"));
 });
+
+app.use('/build', express.static(path.join(__dirname, '../build')));
 
 // const registerRouter = require("./routes/register.route");
 // app.use("/register", registerRouter);
