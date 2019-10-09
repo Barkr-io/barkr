@@ -19,8 +19,8 @@ userController.postUser = (req, res, next) => {
 };
 
 userController.deleteUser = (req, res, next) => {
-  let dbQuery = "DELETE FROM User_table WHERE email=($1)";
-  pool.query(dbQuery, req.body.email).catch(err => res.status(500).send(err));
+  let dbQuery = "DELETE FROM user_table WHERE email=($1)";
+  pool.query(dbQuery, [req.body.email]).catch(err => res.status(500).send(err));
   res.send(req.body.email);
 };
 
