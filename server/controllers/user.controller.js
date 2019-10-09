@@ -15,13 +15,13 @@ userController.postUser = (req, res, next) => {
   const values = [email, first_name, last_name, password];
   let dbQuery = `INSERT INTO User_table (email, first_name, last_name, password) VALUES ($1, $2, $3, $4)`;
   pool.query(dbQuery, values).catch(err => res.status(500).send(err));
-  res.send(req.body.email);
+  next();
 };
 
 userController.deleteUser = (req, res, next) => {
   let dbQuery = "DELETE FROM user_table WHERE email=($1)";
   pool.query(dbQuery, [req.body.email]).catch(err => res.status(500).send(err));
-  res.send(req.body.email);
+  next();
 };
 
 module.exports = userController;

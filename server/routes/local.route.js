@@ -8,11 +8,11 @@ router.get("/user", userController.getUsers, (req, res) => {
 });
 
 router.post("/user", userController.postUser, (req, res) => {
-  res.status(200).send("Saved to DB!", req.body.email);
+  res.status(200).send("Saved to DB!");
 });
 
 router.delete("/user", userController.deleteUser, (req, res) => {
-  res.status(200).send("User Deleted", req.body.email);
+  res.status(200).send("User Deleted");
 });
 
 module.exports = router;
