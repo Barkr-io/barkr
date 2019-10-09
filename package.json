@@ -4,7 +4,7 @@
   "description": "Marketplace Application for K9 owners to find play dates for their dogs/companions.",
   "main": "server.js",
   "scripts": {
-    "test": "jest",
+    "test": "nodemon server/server.js | jest",
     "start": "nodemon server/server.js",
     "dev": "NODE_ENV=development webpack-dev-server --open",
     "build": "NODE_ENV=production webpack"
