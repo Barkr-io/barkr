@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/Barkr.io/barkr"
   },
-  "author": "Mark Shin, Mohtasim Chowdhury, Derek Cross, & Andy Wong",
+  "contributors": ["Mark Shin", "Mohtasim Chowdhury", "Derek Cross", "Andy Wong"],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Barkr.io/barkr"
