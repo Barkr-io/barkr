@@ -1,12 +1,12 @@
-import App from "./App.jsx";
-import React from 'react'
-import ReactDOM from "react-dom";
-import {BrowserRouter} from 'react-router-dom'
+import React from 'react';
+import App from './App.jsx';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
+import store from './store';
 
-ReactDOM.render(
-
-<BrowserRouter>
-<App />
-</BrowserRouter>
-
-, document.querySelector("#root"));
+render (
+    <Provider store={store}>
+        <App />
+    </Provider>, 
+    document.querySelector('#root')
+);
