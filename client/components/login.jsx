@@ -8,7 +8,7 @@ class Login extends Component{
          <form>
            <input id='email'></input>
            <input id='password'></input>
-            
+           <button id='loginButton'>Log in</button>
            To register go to <Link to={`/Signup`}>Signup page</Link>
          </form>
        </div>
