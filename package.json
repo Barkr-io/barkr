@@ -13,15 +13,17 @@
     "type": "git",
     "url": "git+https://github.com/Barkr.io/barkr"
   },
-  "author": "Mark Shin, Mohtasim Chowdhury, Derek Cross, & Andy Wong",
+  "contributors": ["Mark Shin", "Mohtasim Chowdhury", "Derek Cross", "Andy Wong"],
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Barkr.io/barkr"
   },
   "homepage": "https://github.com/Barkr.io/barkr#readme",
   "dependencies": {
+    "cookie-parser": "^1.4.4",
     "express": "^4.17.1",
     "nodemon": "^1.19.3",
+    "pg": "^7.12.1",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
     "react-redux": "^7.1.1",
@@ -33,10 +35,10 @@
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.6",
-    "css-loader": "^0.28.7",
+    "css-loader": "^3.2.0",
     "file-loader": "^4.2.0",
-    "style-loader": "^0.19.0",
     "jest": "^24.9.0",
+    "style-loader": "^0.19.0",
     "supertest": "^4.0.2",
     "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9",
