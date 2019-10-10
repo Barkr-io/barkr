@@ -18,7 +18,7 @@ router.delete('/user', userController.deleteUser, (req, res) => {
 });
 
 router.get('/dog', dogController.getDogs, (req, res) => {
-  res.status(200).json(res.locals.users);
+  res.status(200).json(res.locals.dogs);
 });
 
 router.post('/dog', dogController.postDog, (req, res) => {
@@ -26,7 +26,7 @@ router.post('/dog', dogController.postDog, (req, res) => {
 });
 
 router.delete('/dog', dogController.deleteDog, (req, res) => {
-  res.status(200).send('User Deleted');
+  res.status(200).send('Doggo Deleted');
 });
 
 module.exports = router;

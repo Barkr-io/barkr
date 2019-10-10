@@ -13,18 +13,16 @@ userController.getUsers = (req, res, next) => {
 
 userController.postUser = (req, res, next) => {
   const {
-    email, first_name, last_name, password, dog_id,
+    email, first_name, last_name, password,
   } = req.body;
-  const values = [email, first_name, last_name, password, dog_id];
-  const dbQuery = 'INSERT INTO user_table (email, first_name, last_name, password) VALUES ($1, $2, $3, $4, $5)';
-  pool.query(dbQuery, values).catch((err) => res.status(500).send(err));
-  next();
+  const values = [email, first_name, last_name, password];
+  const dbQuery = 'INSERT INTO user_table (email, first_name, last_name, password) VALUES ($1, $2, $3, $4)';
+  pool.query(dbQuery, values).then(() => next()).catch((err) => res.status(500).send(err));
 };
 
 userController.deleteUser = (req, res, next) => {
   const dbQuery = 'DELETE FROM user_table WHERE email=($1)';
-  pool.query(dbQuery, [req.body.email]).catch((err) => res.status(500).send(err));
-  next();
+  pool.query(dbQuery, [req.body.email]).then(() => next()).catch((err) => res.status(500).send(err));
 };
 
 module.exports = userController;
