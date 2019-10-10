@@ -1,28 +1,32 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import * as actions from '../actions/actions';
-import SignUp from '../components/SignUp.jsx';
-import Login from '../components/Login.jsx'
+import { Switch, Route } from 'react-router-dom'
+import Login from '../components/login.jsx'
+import MainContainer from './MainContainer.jsx'
 
 const mapStateToProps = store => ({
-    users: store.users.userData,
-    dogs: store.users.dogData
-});
-  
-const mapDispatchToProps = dispatch => ({
-    login: () => dispatch(actions.login),
-    signUp: () => dispatch(actions.signUp)
+    userInfo: store.user.userInfo
 });
 
+const mapDispatchToProps = dispatch => ({
+    login: (user) => dispatch(actions.login(user)),
+    signUp: () => dispatch(actions.signup())
+})
+
 class LandingContainer extends Component {
-    constructor(props) {
+    constructor(props){
         super(props);
     }
 
     render(){
-        return(
-            <div className="landing">
-                <Login/>
+        return (
+            <div>
+                    This is the landing page
+                    <Switch>
+                        <Route exact path="/" component={()=><Login login={this.props.login}/> }/>
+                        <Route exact path="/explore" component={()=><MainContainer /> } />
+                    </Switch>
             </div>
         )
     }

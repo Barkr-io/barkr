@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
-import LandingContainer from './containers/LandingContainer.jsx';
 
 
-class App extends Component {
+
+class MainContainer extends Component {
     constructor(props){
         super(props);
     }
 
-    render() {
+    render(){
         return (
             <div>
-              <LandingPage />
+            <p>you are in main container</p>
+
             </div>
         )
     }
 }
 
-export default App;
+export default MainContainer;
