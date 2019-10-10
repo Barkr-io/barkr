@@ -1,8 +1,18 @@
 import React, { Component } from 'react';
+import LandingPage from './containers/LandingContainer.jsx'
+
+
 
 class App extends Component {
     render() {
-        return (<p>Hello World</p>)
+        return (
+            <div>
+                        
+                        <LandingPage />
+
+                
+            </div>
+        )
     }
 }
 
