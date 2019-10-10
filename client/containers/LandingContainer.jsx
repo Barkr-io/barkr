@@ -27,8 +27,6 @@ class LandingContainer extends Component {
                         <Route exact path="/" component={()=><Login login={this.props.login}/> }/>
                         <Route exact path="/explore" component={()=><MainContainer /> } />
                     </Switch>
-
-
             </div>
         )
     }

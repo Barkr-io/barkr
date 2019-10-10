@@ -7,9 +7,9 @@ import {BrowserRouter} from 'react-router-dom'
 
 render (
     <BrowserRouter>
-    <Provider store={store}>
+      <Provider store={store}>
         <App />
-    </Provider>
+      </Provider>
     </BrowserRouter>,
     document.querySelector('#root')
 );

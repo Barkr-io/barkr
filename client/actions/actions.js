@@ -1,4 +1,3 @@
-
 import {LOG_IN} from '../constants/actionsTypes';
 import {SIGN_UP} from '../constants/actionsTypes';
 require('babel-core/register')
