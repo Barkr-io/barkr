@@ -1,9 +1,10 @@
-const express = require("express");
+const express = require('express');
+
 const app = express();
 const cookieParser = require("cookie-parser");
 const path = require("path");
 const PORT = process.env.PORT;
-const router = require('./routes/local.router');
+const localRouter = require('./routes/local.route');
 
 app.use(cookieParser());
 app.use(express.json());
@@ -16,7 +17,7 @@ app.get("/", (req, res) => {
 
 app.use('/build', express.static(path.join(__dirname, '../build')));
 
-app.use('/', router);
+app.use('/', localRouter);
 
 app.use('*', (req, res) => {
   res.status(404).send("404 Page Not Found")

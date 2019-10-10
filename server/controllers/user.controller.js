@@ -1,19 +1,12 @@
-const pool = require("../models/UserModel");
-
-let userList;
-
-if (process.env.NODE_ENV === 'test') {
-  writeLocation = `${__dirname}/markets.test.json`;
-  userList = JSON.parse(fs.readFileSync(writeLocation));
-}
+/* eslint-disable camelcase */
+const pool = require('../models/UserModel');
 
 const userController = {};
 
 userController.getUsers = (req, res, next) => {
-  let dbQuery = "SELECT * FROM user_table";
-  pool.query(dbQuery)
-  .then(result => {
-    res.locals.users = result.rows;
+  const dbQuery = 'SELECT * FROM user_table';
+  pool.query(dbQuery).then((response) => {
+    res.locals.users = response.rows;
     next();
   })
   .catch(err => console.error(err));
